@@ -9,6 +9,6 @@ WORKDIR /var/www/application/client
 
 COPY ../application/client/package.json /var/www/application/client/package.json
 
-ENV PORT=3000
+ENV PORT=8000
 
 ENTRYPOINT ["docker-entrypoint"]
