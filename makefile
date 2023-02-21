@@ -17,16 +17,16 @@ init:
 	@cp -n .env .env.local || echo "File .env.local already exists."
 
 build:
-	@$(DOCKER_COMPOSE) $(DOCKER_COMPOSE_FILE) build --pull --no-cache
+	@$(DOCKER_COMPOSE) build --pull --no-cache
 
 up:
-	@$(DOCKER_COMPOSE) $(DOCKER_COMPOSE_FILE) up --detach
+	@$(DOCKER_COMPOSE) up --detach
 
 down:
 	@$(DOCKER_COMPOSE) down --remove-orphans
 
 start:
-	@$(DOCKER_COMPOSE) $(DOCKER_COMPOSE_FILE) up --build --detach
+	@$(DOCKER_COMPOSE) up --build --detach
 
 restart: down start
 
