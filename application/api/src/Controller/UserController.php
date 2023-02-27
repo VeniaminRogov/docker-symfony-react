@@ -42,8 +42,7 @@ class UserController extends AbstractFOSRestController
             ]
         ];
 
-        return new JsonResponse([
-            'data' => $users,
-        ], 200);
+        return new JsonResponse(
+            $users, 200);
     }
 }
